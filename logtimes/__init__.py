@@ -1,6 +1,7 @@
 import sys
 from dateutil.parser import parse as parse_date
 
+
 def main():
     start = None
     for line in sys.stdin:
@@ -20,5 +21,3 @@ def main():
 
         delta = dt - start
         print(f"{delta} {line}")
-
-
