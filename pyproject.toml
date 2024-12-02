@@ -17,3 +17,8 @@ logtimes = "logtimes:main"
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "pyinstaller>=6.11.1",
+]
