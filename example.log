@@ -1,0 +1,35 @@
+2024-12-02T18:59:17.841 DEBUG --- [  MainThread] plux.runtime.manager       : instantiating plugin PluginSpec(localstack.hooks.on_infra_start.setup_pro_infra = <function setup_pro_infra at 0x7f4233a8c900>)"
+2024-12-02T18:59:17.841 DEBUG --- [  MainThread] plux.runtime.manager       : loading plugin localstack.hooks.on_infra_start:setup_pro_infra
+2024-12-02T18:59:30.799 DEBUG --- [  MainThread] localstack.dns.server      : Determined fallback dns: 8.8.8.8
+2024-12-02T18:59:30.800 DEBUG --- [  MainThread] localstack.dns.server      : Starting DNS servers (tcp/udp port 53 on 0.0.0.0)...
+2024-12-02T18:59:30.800 DEBUG --- [  MainThread] localstack.dns.server      : Adding host .*localhost.localstack.cloud pointing to LocalStack
+2024-12-02T18:59:30.800 DEBUG --- [  MainThread] localstack.dns.server      : Adding host .*localhost.localstack.cloud with record DynamicRecord(record_type=<RecordType.A: 1>, record_id=None)
+2024-12-02T18:59:30.800 DEBUG --- [  MainThread] localstack.dns.server      : Adding host .*localhost.localstack.cloud with record DynamicRecord(record_type=<RecordType.AAAA: 2>, record_id=None)
+2024-12-02T18:59:30.802 DEBUG --- [-functhread1] localstack.dns.server      : DNS Server started
+2024-12-02T18:59:30.807 DEBUG --- [  MainThread] localstack.dns.server      : DNS server startup finished.
+2024-12-02T18:59:30.822  INFO --- [  MainThread] l.p.c.b.licensingv2        : Successfully activated cached license 5b6b8b13-73ed-4be9-b13a-bab0db4e4801:enterprise from /etc/localstack/conf.d/license.json 🔑✅
+2024-12-02T18:59:30.894 DEBUG --- [  MainThread] localstack.runtime.init    : Init scripts discovered: {BOOT: [], START: [], READY: [], SHUTDOWN: []}
+2024-12-02T18:59:30.894 DEBUG --- [  MainThread] localstack.plugins         : Checking for the usage of deprecated community features and configs...
+2024-12-02T18:59:30.904 DEBUG --- [  MainThread] localstack.dns.server      : Overwriting container DNS server to point to localhost
+2024-12-02T18:59:30.916 DEBUG --- [  MainThread] l.pro.core.plugins         : setting up transparent endpoint injection
+2024-12-02T18:59:30.916 DEBUG --- [  MainThread] localstack.dns.server      : Adding host .*.amazonaws.com pointing to LocalStack
+2024-12-02T18:59:30.916 DEBUG --- [  MainThread] localstack.dns.server      : Adding host .*.amazonaws.com with record DynamicRecord(record_type=<RecordType.A: 1>, record_id=None)
+2024-12-02T18:59:30.916 DEBUG --- [  MainThread] localstack.dns.server      : Adding host .*.amazonaws.com with record DynamicRecord(record_type=<RecordType.AAAA: 2>, record_id=None)
+2024-12-02T18:59:30.916 DEBUG --- [  MainThread] localstack.dns.server      : Adding host .*aws.amazon.com pointing to LocalStack
+2024-12-02T18:59:30.916 DEBUG --- [  MainThread] localstack.dns.server      : Adding host .*aws.amazon.com with record DynamicRecord(record_type=<RecordType.A: 1>, record_id=None)
+2024-12-02T18:59:30.916 DEBUG --- [  MainThread] localstack.dns.server      : Adding host .*aws.amazon.com with record DynamicRecord(record_type=<RecordType.AAAA: 2>, record_id=None)
+2024-12-02T18:59:30.916 DEBUG --- [  MainThread] localstack.dns.server      : Adding host .*cloudfront.net pointing to LocalStack
+2024-12-02T18:59:30.916 DEBUG --- [  MainThread] localstack.dns.server      : Adding host .*cloudfront.net with record DynamicRecord(record_type=<RecordType.A: 1>, record_id=None)
+2024-12-02T18:59:30.916 DEBUG --- [  MainThread] localstack.dns.server      : Adding host .*cloudfront.net with record DynamicRecord(record_type=<RecordType.AAAA: 2>, record_id=None)
+2024-12-02T18:59:30.916 DEBUG --- [  MainThread] localstack.dns.server      : Adding skip pattern ^(?:prod|staging)sharedcertsstack-.*\.s3(\.[^\.]+)?\.amazonaws\.com
+2024-12-02T18:59:30.916 DEBUG --- [  MainThread] localstack.dns.server      : Adding skip pattern ^github-production-release-.*\.s3(\.[^\.]+)?\.amazonaws\.com
+2024-12-02T18:59:30.916 DEBUG --- [  MainThread] localstack.dns.server      : Adding skip pattern ^aws-glue-etl-artifacts\.s3(\.[^\.]+)?\.amazonaws\.com
+2024-12-02T18:59:30.916 DEBUG --- [  MainThread] localstack.dns.server      : Adding skip pattern ^localstack-assets\.s3(\.[^\.]+)?\.amazonaws\.com
+2024-12-02T18:59:30.916 DEBUG --- [  MainThread] localstack.dns.server      : Adding skip pattern ^redshift-maven-repository\.s3(\.[^\.]+)?\.amazonaws\.com
+2024-12-02T18:59:30.916 DEBUG --- [  MainThread] localstack.dns.server      : Adding skip pattern .*(forums|console|docs|clientvpn|sso|boto3|(signin(\-reg)?))\.([^\.]+\.)?(aws\.amazon|amazonaws)\.com
+2024-12-02T18:59:30.916 DEBUG --- [  MainThread] localstack.dns.server      : Adding skip pattern ^localstack-pods-.*\.s3(\.[^\.]+)?\.amazonaws\.com
+2024-12-02T18:59:30.916 DEBUG --- [  MainThread] localstack.dns.server      : Adding skip pattern ^prod-registry-k8s-io-.*\.s3\.(dualstack\.)?.*\.amazonaws\.com
+2024-12-02T18:59:30.916 DEBUG --- [  MainThread] localstack.dns.server      : Adding skip pattern ^aws\.amazon\.com
+2024-12-02T18:59:30.916 DEBUG --- [  MainThread] localstack.dns.server      : Adding skip pattern .*captcha-prod\.s3(\.[^\.]+)?\.amazonaws\.com
+2024-12-02T18:59:31.957 DEBUG --- [  MainThread] l.p.c.services.iam.router  : Adding IAM policy generation routes...
+2024-12-02T18:59:32.748  INFO --- [  MainThread] l.p.c.extensions.platform  : loaded 0 extensions
