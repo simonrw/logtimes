@@ -1,14 +1,14 @@
-import sys
 from dateutil.parser import parse as parse_date
 import argparse
 
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.parse_args()
+    parser.add_argument("-i", "--infile", type=argparse.FileType("r"), default="-")
+    args = parser.parse_args()
 
     start = None
-    for line in sys.stdin:
+    for line in args.infile:
         line = line.strip()
 
         try:
