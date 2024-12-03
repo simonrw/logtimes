@@ -1,8 +1,12 @@
 import sys
 from dateutil.parser import parse as parse_date
+import argparse
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.parse_args()
+
     start = None
     for line in sys.stdin:
         line = line.strip()
