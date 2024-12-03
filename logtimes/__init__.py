@@ -1,5 +1,12 @@
-from dateutil.parser import parse as parse_date
+from dataclasses import dataclass
+from datetime import datetime, timedelta
+from dateutil.parser import ParserError, parse as parse_date
 import argparse
+
+@dataclass(frozen=True)
+class State:
+    start: datetime
+    last: datetime
 
 
 def main():
@@ -7,21 +14,34 @@ def main():
     parser.add_argument("-i", "--infile", type=argparse.FileType("r"), default="-")
     args = parser.parse_args()
 
-    start = None
+    state: State | None = None
     for line in args.infile:
         line = line.strip()
+
+        def no_time_log():
+            print(f"? ? {line}")
 
         try:
             d = line.split()[0]
         except IndexError:
+            no_time_log()
             continue
 
-        dt = parse_date(d)
+        try:
+            dt = parse_date(d)
+        except ParserError:
+            no_time_log()
+            continue
         if not dt:
-            print(f"-1 {line}")
+            no_time_log()
+            continue
 
-        if start is None:
-            start = dt
+        if state is None:
+            state = State(start=dt, last=dt)
 
-        delta = dt - start
-        print(f"{delta} {line}")
+        delta_from_last = (dt - state.last).total_seconds()
+        delta_from_start = (dt - state.start).total_seconds()
+        print(f"{delta_from_last:.2f}\t{delta_from_start:.2f}\t{line}")
+
+        # update persisted state
+        state = State(start=state.start, last=dt)
